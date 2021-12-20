@@ -90,8 +90,113 @@ good to go!
 
  Wait for my code review.
  */
+ 
+ #include <iostream>
 
-#include <iostream>
+struct FloatType
+{
+    float add(float lhs, float rhs);
+    float subtract(float lhs, float rhs);
+    float multiply(float lhs, float rhs);
+    float divide(float lhs, float rhs);
+};
+
+struct DoubleType
+{
+    double add(double lhs, double rhs);
+    double subtract(double lhs, double rhs);
+    double multiply(double lhs, double rhs);
+    double divide(double lhs, double rhs);
+};
+
+struct IntType
+{
+    int add(int lhs, int rhs);
+    int subtract(int lhs, int rhs);
+    int multiply(int lhs, int rhs);
+    int divide(int lhs, int rhs);
+};
+
+// =========FLOATTYPE FUNCTION DEFINITIONS==================
+
+float FloatType::add(float lhs, float rhs)
+{
+    return lhs + rhs;
+}
+
+float FloatType::subtract(float lhs, float rhs)
+{
+    return lhs - rhs;
+}
+
+float FloatType::multiply(float lhs, float rhs)
+{
+    return lhs * rhs;
+}
+
+float FloatType::divide(float lhs, float rhs)
+{
+    if(rhs == 0.f) 
+        std::cout << "\nwarning, floating point division by zero returns 'inf' !" << std::endl;
+
+    return lhs / rhs;
+}
+
+// ==========DOUBLETYPE FUNCTION DEFINITIONS================
+
+double DoubleType::add(double lhs, double rhs)
+{
+    return lhs + rhs;
+}
+
+double DoubleType::subtract(double lhs, double rhs)
+{
+    return lhs - rhs;
+}
+
+double DoubleType::multiply(double lhs, double rhs)
+{
+    return lhs * rhs;
+}
+
+double DoubleType::divide(double lhs, double rhs)
+{
+    if(rhs == 0.0) 
+        std::cout << "\nwarning, floating point division by zero returns 'inf' !" << std::endl;
+
+    return lhs / rhs;
+}
+
+// =======INTTYPE FUNCTIONS DEFINITIONS====================
+
+int IntType::add(int lhs, int rhs)
+{
+    return lhs + rhs;
+}
+
+int IntType::subtract(int lhs, int rhs)
+{
+    return lhs - rhs;
+}
+
+int IntType::multiply(int lhs, int rhs)
+{
+    return lhs * rhs;
+}
+
+int IntType::divide(int lhs, int rhs)
+{
+    if(rhs == 0)
+    {
+        std::cout << "error, integer division by zero will crash the program!\nreturning lhs" << std::endl;
+        return lhs;   
+    }
+    
+    return lhs / rhs;
+}
+
+// ==============   MAIN()  ===============================
+
 int main() 
 {
     FloatType ft;
