@@ -332,7 +332,7 @@ FloatType& FloatType::divide(const IntType& input)
 {
     int itValue = *input.value;
 
-    if(itValue == 0.f) 
+    if(itValue == 0) 
     {
         std::cout << "error: integer division by zero is an error and will crash the program!" << std::endl;
         
@@ -574,7 +574,7 @@ IntType& IntType::divide(const FloatType& input)
 {
     float ftValue = *input.value;
 
-    if(ftValue == 0.0) 
+    if(ftValue == 0.f) 
         std::cout << "warning: floating point division by zero!" << std::endl;
 
     *value /= ftValue;
