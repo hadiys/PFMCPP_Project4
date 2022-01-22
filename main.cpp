@@ -146,21 +146,21 @@ struct FloatType
     ~FloatType();
 
     FloatType& add(float input);
-    FloatType& add(const FloatType& input);
-    FloatType& add(const DoubleType& input);
-    FloatType& add(const IntType& input);
+    //FloatType& add(const FloatType& input);
+    //FloatType& add(const DoubleType& input);
+    //FloatType& add(const IntType& input);
     FloatType& subtract(float input);
-    FloatType& subtract(const FloatType& input);
-    FloatType& subtract(const DoubleType& input);
-    FloatType& subtract(const IntType& input);
+    //FloatType& subtract(const FloatType& input);
+    //FloatType& subtract(const DoubleType& input);
+    //FloatType& subtract(const IntType& input);
     FloatType& multiply(float input);
-    FloatType& multiply(const FloatType& input);
-    FloatType& multiply(const DoubleType& input);
-    FloatType& multiply(const IntType& input);
+    //FloatType& multiply(const FloatType& input);
+    //FloatType& multiply(const DoubleType& input);
+    //FloatType& multiply(const IntType& input);
     FloatType& divide(float input);
-    FloatType& divide(const FloatType& input);
-    FloatType& divide(const DoubleType& input);
-    FloatType& divide(const IntType& input);
+    //FloatType& divide(const FloatType& input);
+    //FloatType& divide(const DoubleType& input);
+    //FloatType& divide(const IntType& input);
 };
 
 struct DoubleType
@@ -171,21 +171,21 @@ struct DoubleType
     ~DoubleType();
 
     DoubleType& add(double input);
-    DoubleType& add(const DoubleType& input);
-    DoubleType& add(const FloatType& input);
-    DoubleType& add(const IntType& input);
+    //DoubleType& add(const DoubleType& input);
+    //DoubleType& add(const FloatType& input);
+    //DoubleType& add(const IntType& input);
     DoubleType& subtract(double input);
-    DoubleType& subtract(const DoubleType& input);
-    DoubleType& subtract(const FloatType& input);
-    DoubleType& subtract(const IntType& input);
+    //DoubleType& subtract(const DoubleType& input);
+    //DoubleType& subtract(const FloatType& input);
+    //DoubleType& subtract(const IntType& input);
     DoubleType& multiply(double input);
-    DoubleType& multiply(const DoubleType& input);
-    DoubleType& multiply(const FloatType& input);
-    DoubleType& multiply(const IntType& input);
+    //DoubleType& multiply(const DoubleType& input);
+    //DoubleType& multiply(const FloatType& input);
+    //DoubleType& multiply(const IntType& input);
     DoubleType& divide(double input);
-    DoubleType& divide(const DoubleType& input);
-    DoubleType& divide(const FloatType& input);
-    DoubleType& divide(const IntType& input);
+    //DoubleType& divide(const DoubleType& input);
+    //DoubleType& divide(const FloatType& input);
+   // DoubleType& divide(const IntType& input);
 };
 
 struct IntType
@@ -196,21 +196,21 @@ struct IntType
     ~IntType();
 
     IntType& add(int input);
-    IntType& add(const IntType& input);
-    IntType& add(const FloatType& input);
-    IntType& add(const DoubleType& input);
+    //IntType& add(const IntType& input);
+    //IntType& add(const FloatType& input);
+   // IntType& add(const DoubleType& input);
     IntType& subtract(int input);
-    IntType& subtract(const IntType& input);
-    IntType& subtract(const FloatType& input);
-    IntType& subtract(const DoubleType& input);
+   // IntType& subtract(const IntType& input);
+   // IntType& subtract(const FloatType& input);
+   // IntType& subtract(const DoubleType& input);
     IntType& multiply(int input);
-    IntType& multiply(const IntType& input);
-    IntType& multiply(const FloatType& input);
-    IntType& multiply(const DoubleType& input);
+    //IntType& multiply(const IntType& input);
+    //IntType& multiply(const FloatType& input);
+    //IntType& multiply(const DoubleType& input);
     IntType& divide(int input);
-    IntType& divide(const IntType& input);
-    IntType& divide(const FloatType& input);
-    IntType& divide(const DoubleType& input);
+    //IntType& divide(const IntType& input);
+    //IntType& divide(const FloatType& input);
+    //IntType& divide(const DoubleType& input);
 };
 
 // =========FLOATTYPE FUNCTION DEFINITIONS==================
@@ -230,6 +230,7 @@ FloatType& FloatType::add(float input)
     return *this;
 }
 
+/*
 FloatType& FloatType::add(const FloatType& input)
 {
     return this->add(*input.value);
@@ -238,12 +239,13 @@ FloatType& FloatType::add(const FloatType& input)
 FloatType& FloatType::add(const DoubleType& input)
 {
     return this->add(*input.value);
-}
 
 FloatType& FloatType::add(const IntType& input)
 {
     return this->add(*input.value);
 }
+}
+*/
 
 FloatType& FloatType::subtract(float input)
 {
@@ -251,6 +253,7 @@ FloatType& FloatType::subtract(float input)
     return *this;
 }
 
+/*
 FloatType& FloatType::subtract(const FloatType& input)
 {
     return this->subtract(*input.value);
@@ -265,6 +268,7 @@ FloatType& FloatType::subtract(const IntType& input)
 {
     return this->subtract(*input.value);
 }
+*/
 
 FloatType& FloatType::multiply(float input)
 {
@@ -272,6 +276,7 @@ FloatType& FloatType::multiply(float input)
     return *this;
 }
 
+/*
 FloatType& FloatType::multiply(const FloatType& input)
 {
     return this->multiply(*input.value);
@@ -287,6 +292,7 @@ FloatType& FloatType::multiply(const IntType& input)
 {
     return this->multiply(*input.value);
 }
+*/
 
 FloatType& FloatType::divide(float input)
 {
@@ -297,6 +303,7 @@ FloatType& FloatType::divide(float input)
     return *this;
 }
 
+/*
 FloatType& FloatType::divide(const FloatType& input)
 {
     return this->divide(*input.value);
@@ -311,7 +318,7 @@ FloatType& FloatType::divide(const IntType& input)
 {
     return this->divide(*input.value);
 }
-
+*/
 // ==========DOUBLETYPE FUNCTION DEFINITIONS================
 
 DoubleType::DoubleType(double input) : value(new double(input))
@@ -329,6 +336,7 @@ DoubleType& DoubleType::add(double input)
     return *this;
 }
 
+/*
 DoubleType& DoubleType::add(const FloatType& input)
 {
     return this->add(*input.value);
@@ -343,6 +351,7 @@ DoubleType& DoubleType::add(const IntType& input)
 {
     return this->add(*input.value);
 }
+*/
 
 DoubleType& DoubleType::subtract(double input)
 {
@@ -350,6 +359,7 @@ DoubleType& DoubleType::subtract(double input)
     return *this;
 }
 
+/*
 DoubleType& DoubleType::subtract(const FloatType& input)
 {
     return this->subtract(*input.value);
@@ -364,6 +374,7 @@ DoubleType& DoubleType::subtract(const IntType& input)
 {
     return this->subtract(*input.value);
 }
+*/
 
 DoubleType& DoubleType::multiply(double input)
 {
@@ -371,6 +382,7 @@ DoubleType& DoubleType::multiply(double input)
     return *this;
 }
 
+/*
 DoubleType& DoubleType::multiply(const FloatType& input)
 {
     return this->multiply(*input.value);
@@ -385,6 +397,7 @@ DoubleType& DoubleType::multiply(const IntType& input)
 {
     return this->multiply(*input.value);
 }
+*/
 
 DoubleType& DoubleType::divide(double input)
 {
@@ -395,6 +408,7 @@ DoubleType& DoubleType::divide(double input)
     return *this;
 }
 
+/*
 DoubleType& DoubleType::divide(const FloatType& input)
 {
     return this->divide(*input.value);
@@ -409,6 +423,7 @@ DoubleType& DoubleType::divide(const IntType& input)
 {
     return this->divide(*input.value);
 }
+*/
 
 // =======INTTYPE FUNCTIONS DEFINITIONS====================
 
@@ -427,6 +442,7 @@ IntType& IntType::add(int input)
     return *this;
 }
 
+/*
 IntType& IntType::add(const FloatType& input)
 {
     return this->add(*input.value);
@@ -441,6 +457,7 @@ IntType& IntType::add(const IntType& input)
 {
     return this->add(*input.value);
 }
+*/
 
 IntType& IntType::subtract(int input)
 {
@@ -448,6 +465,7 @@ IntType& IntType::subtract(int input)
     return *this;
 }
 
+/*
 IntType& IntType::subtract(const FloatType& input)
 {
     return this->subtract(*input.value);
@@ -462,6 +480,7 @@ IntType& IntType::subtract(const IntType& input)
 {
     return this->subtract(*input.value);
 }
+*/
 
 IntType& IntType::multiply(int input)
 {
@@ -469,6 +488,7 @@ IntType& IntType::multiply(int input)
     return *this;
 }
 
+/*
 IntType& IntType::multiply(const FloatType& input)
 {
     return this->multiply(*input.value);
@@ -483,6 +503,7 @@ IntType& IntType::multiply(const IntType& input)
 {
     return this->multiply(*input.value);
 }
+*/
 
 IntType& IntType::divide(int input)
 { 
@@ -496,6 +517,7 @@ IntType& IntType::divide(int input)
     return *this;
 }
 
+/*
 IntType& IntType::divide(const FloatType& input)
 {
     return this->divide(*input.value);
@@ -510,7 +532,7 @@ IntType& IntType::divide(const IntType& input)
 {
     return this->divide(*input.value);
 }
-
+*/
 
 // ==============   MAIN()  ===============================
 
